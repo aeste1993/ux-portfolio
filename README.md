@@ -33,6 +33,10 @@ python3 -m http.server 8000
 4. The site appears at `https://<username>.github.io/<repo>/` within a couple of minutes.
 5. Optional: add a custom domain under the same Pages settings.
 
+## Search engines
+
+Every page has `<meta name="robots" content="noindex, nofollow">`, so Google and others are asked not to list the site. It still works for anyone with the link. To make it discoverable later, delete that line from each page (including `_templates/case-study.html`). Don't add a `robots.txt` that blocks crawling: crawlers must be able to read the page to see the noindex tag.
+
 ## Before you share the link
 
 - Confirm that the figures, quotes and descriptions are cleared to be public by your employer.
